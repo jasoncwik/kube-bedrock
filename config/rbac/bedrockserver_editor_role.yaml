@@ -1,0 +1,24 @@
+# permissions for end users to edit bedrockservers.
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  name: bedrockserver-editor-role
+rules:
+- apiGroups:
+  - bedrock.cwik.org
+  resources:
+  - bedrockservers
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - bedrock.cwik.org
+  resources:
+  - bedrockservers/status
+  verbs:
+  - get

@@ -1,0 +1,20 @@
+# permissions for end users to view bedrockservers.
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  name: bedrockserver-viewer-role
+rules:
+- apiGroups:
+  - bedrock.cwik.org
+  resources:
+  - bedrockservers
+  verbs:
+  - get
+  - list
+  - watch
+- apiGroups:
+  - bedrock.cwik.org
+  resources:
+  - bedrockservers/status
+  verbs:
+  - get

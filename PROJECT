@@ -1,0 +1,16 @@
+domain: cwik.org
+layout:
+- go.kubebuilder.io/v3
+projectName: kube-bedrock
+repo: github.com/jasoncwik/kube-bedrock
+resources:
+- api:
+    crdVersion: v1
+    namespaced: true
+  controller: true
+  domain: cwik.org
+  group: bedrock
+  kind: BedrockServer
+  path: github.com/jasoncwik/kube-bedrock/api/v1
+  version: v1
+version: "3"

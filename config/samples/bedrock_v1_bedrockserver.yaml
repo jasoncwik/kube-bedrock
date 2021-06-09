@@ -1,0 +1,7 @@
+apiVersion: bedrock.cwik.org/v1
+kind: BedrockServer
+metadata:
+  name: bedrockserver-sample
+spec:
+  # Add fields here
+  foo: bar
